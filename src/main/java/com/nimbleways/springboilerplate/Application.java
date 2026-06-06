@@ -20,17 +20,4 @@ public class Application {
 		SpringApplication.run(Application.class, args);
 	}
 
-	@Bean
-	CommandLineRunner seedData(ProductRepository productRepository, OrderRepository orderRepository) {
-		return args -> {
-			Product normal = productRepository.save(new Product(null, 0, 10, ProductType.NORMAL, "Widget", null, null, null));
-			Product expirable = productRepository.save(new Product(null, 0, 5, ProductType.EXPIRABLE, "Milk", LocalDate.now().plusDays(7), null, null));
-			Product seasonal = productRepository.save(new Product(null, 3, 8, ProductType.SEASONAL, "Strawberries", null, LocalDate.now().minusDays(10), LocalDate.now().plusDays(20)));
-
-			Order order = new Order();
-			order.setItems(Set.of(normal, expirable, seasonal));
-			orderRepository.save(order);
-		};
-	}
-
 }

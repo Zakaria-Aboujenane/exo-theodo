@@ -41,11 +41,11 @@ class ApplicationIntegrationTests {
     void processOrderReturns200() {
         List<Product> saved = productRepository.saveAll(List.of(
                 new Product(null, 15, 30, ProductType.NORMAL, "USB Cable", null, null, null)
-//                new Product(null, 10, 0, ProductType.NORMAL, "USB Dongle", null, null, null),
-//                new Product(null, 15, 30, ProductType.EXPIRABLE, "Butter", LocalDate.now().plusDays(26), null, null),
-//                new Product(null, 90, 6, ProductType.EXPIRABLE, "Milk", LocalDate.now().minusDays(2), null, null),
-//                new Product(null, 15, 30, ProductType.SEASONAL, "Watermelon", null, LocalDate.now().minusDays(2), LocalDate.now().plusDays(58)),
-//                new Product(null, 15, 30, ProductType.SEASONAL, "Grapes", null, LocalDate.now().plusDays(180), LocalDate.now().plusDays(240))
+               new Product(null, 10, 0, ProductType.NORMAL, "USB Dongle", null, null, null),
+               new Product(null, 15, 30, ProductType.EXPIRABLE, "Butter", LocalDate.now().plusDays(26), null, null),
+               new Product(null, 90, 6, ProductType.EXPIRABLE, "Milk", LocalDate.now().minusDays(2), null, null),
+               new Product(null, 15, 30, ProductType.SEASONAL, "Watermelon", null, LocalDate.now().minusDays(2), LocalDate.now().plusDays(58)),
+               new Product(null, 15, 30, ProductType.SEASONAL, "Grapes", null, LocalDate.now().plusDays(180), LocalDate.now().plusDays(240))
         ));
         Order order = orderRepository.save(new Order(null, Set.copyOf(saved)));
 
