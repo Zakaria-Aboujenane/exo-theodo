@@ -1,0 +1,11 @@
+/home/zakaria/dev/theodo/merjane-refacto-java/api/src/test/java/com/nimbleways/springboilerplate/utils/TestUtils.java
+/home/zakaria/dev/theodo/merjane-refacto-java/api/src/test/java/com/nimbleways/springboilerplate/handlers/product/implementations/NormalProductHandlerTest.java
+/home/zakaria/dev/theodo/merjane-refacto-java/api/src/test/java/com/nimbleways/springboilerplate/controllers/OrderControllerTests.java
+/home/zakaria/dev/theodo/merjane-refacto-java/api/src/test/java/com/nimbleways/springboilerplate/services/implementations/OrderServiceTest.java
+/home/zakaria/dev/theodo/merjane-refacto-java/api/src/test/java/com/nimbleways/springboilerplate/repositories/OrderRepositoryTest.java
+/home/zakaria/dev/theodo/merjane-refacto-java/api/src/test/java/com/nimbleways/springboilerplate/ApplicationIntegrationTests.java
+/home/zakaria/dev/theodo/merjane-refacto-java/api/src/test/java/com/nimbleways/springboilerplate/handlers/product/implementations/SeasonalProductHandlerTest.java
+/home/zakaria/dev/theodo/merjane-refacto-java/api/src/test/java/com/nimbleways/springboilerplate/services/implementations/ProductServiceTest.java
+/home/zakaria/dev/theodo/merjane-refacto-java/api/src/test/java/com/nimbleways/springboilerplate/utils/StaticLogbackAppender.java
+/home/zakaria/dev/theodo/merjane-refacto-java/api/src/test/java/com/nimbleways/springboilerplate/utils/Annotations/UnitTest.java
+/home/zakaria/dev/theodo/merjane-refacto-java/api/src/test/java/com/nimbleways/springboilerplate/handlers/product/implementations/ExpirableProductHandlerTest.java

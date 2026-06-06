@@ -1,0 +1,37 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: password
+
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate.format_sql: true
+
+  liquibase:
+    enabled: false
+  main:
+    banner-mode: off
+
+security:
+  jwt:
+    secret: ${JWT_SECRET:zdtlD3JK56m6wTTgsNFhqzjqP}
+    issuer: ${JWT_ISSUER:nimbleways}
+
+server:
+  servlet:
+    context-path: /api
+
+logging:
+  level:
+    org.springframework: ERROR
+    root: ERROR
+
+retrofit:
+  posts:
+    base-url: https://jsonplaceholder.typicode.com
