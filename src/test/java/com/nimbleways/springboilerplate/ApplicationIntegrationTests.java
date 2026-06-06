@@ -50,7 +50,7 @@ class ApplicationIntegrationTests {
         Order order = orderRepository.save(new Order(null, Set.copyOf(saved)));
 
         ResponseEntity<ProcessOrderResponse> response = restTemplate.postForEntity(
-                "/api/orders/{orderId}/processOrder",
+                "/orders/{orderId}/processOrder",
                 null,
                 ProcessOrderResponse.class,
                 order.getId()
@@ -64,12 +64,18 @@ class ApplicationIntegrationTests {
     @Test
     void processOrderReturns404WhenOrderNotFound() {
         ResponseEntity<Void> response = restTemplate.postForEntity(
-                "/api/orders/{orderId}/processOrder",
+                "/orders/{orderId}/processOrder",
                 null,
                 Void.class,
                 999L
         );
 
         assertEquals(HttpStatus.NOT_FOUND, response.getStatusCode());
+    }
+
+    @AfterEach
+    void cleanUp() {
+        orderRepository.deleteAll();
+        productRepository.deleteAll();
     }
 }
